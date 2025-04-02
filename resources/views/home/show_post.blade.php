@@ -81,7 +81,7 @@
                 <td>{{$post->name}}</td>
                
                 <td>{{$post->usertype}}</td>
-                @if(Auth::user() && $post->usertype=='user')
+                @if(Auth::user() && $post->usertype=='user' && $post->user_id==Auth::user()->id)
                  <td><a href="{{url('destroy_post', $post->id)}}" class="btn btn-danger" onclick="return confirm('Are you sure to delete this?')">Delete</a></td>
                     <td><a href="{{url('edit_post', $post->id)}}" class="btn btn-primary">Edit</a></td>
                     @else 
