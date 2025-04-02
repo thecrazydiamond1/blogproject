@@ -1,4 +1,12 @@
-
+<style>
+   .service_text{
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      
+      margin-top: 20px;
+   }
+</style>
 <div class="services_section layout_padding">
          <div class="container">
             <h1 class="services_taital">Blogs </h1>

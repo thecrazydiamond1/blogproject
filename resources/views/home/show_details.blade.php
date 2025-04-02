@@ -4,7 +4,26 @@
     
    
     @include('home.homecss')
-    
+    <style>
+      .title{
+         font-size: 30px;
+         font-weight: bold;
+         padding: 20px;
+         color: black;
+         text-decoration: underline;
+         text-align: center;
+         margin-top: 20px;
+      }
+      .description{
+         font-size: 20px;
+         padding: 20px;
+         color: black;
+         text-align: center;
+         margin-top: 20px;
+      }
+      
+     
+    </style>
  
    </head>
    <body>
@@ -17,12 +36,12 @@
       
       <div style="text-align:center;" class="col-md-12">
     @if($posts)
-    <img style="padding:20px;" src="{{ asset('postimage/' . $posts->image) }}" alt="Post Image" class="services_image">
-    <h2 ><b>{{$posts->title}}<b></h2>
-    <h4>{{$posts->description}}</h4>
+    <img style="padding:20px; display:block; margin:0 auto;" src="{{ asset('postimage/' . $posts->image) }}" alt="Post Image" class="services_image">
+    <h2 class="title" ><b>{{$posts->title}}<b></h2>
+    <h4 class="description">{{$posts->description}}</h4>
 
     <p class="service_text_2">Posted by an {{$posts->name}} </p>
-    <p > {{$posts->Description}} </p>
+  
 
     @else
     <p>No post found.</p>
