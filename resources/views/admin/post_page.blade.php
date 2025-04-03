@@ -48,6 +48,7 @@
                 <div>
                     <form action="{{url('add_post')}}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        
                         <div class="div_center">
                             <label>Post Title</label>
                             <input type="text" name="title">
