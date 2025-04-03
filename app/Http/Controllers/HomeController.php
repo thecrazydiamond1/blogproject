@@ -27,6 +27,19 @@ class HomeController extends Controller
     }
     public function homepage()
     {  
+        if(Auth::id()){
+            $usertype = Auth::user()->usertype;
+            $user=Auth::user();
+            
+            $posts=Post::all();
+            if($usertype == 'admin'){
+                return view('admin.adminhome');
+            }else if($usertype == 'user'){
+                return view('home.homepage', compact('posts'));
+            }else{
+                return redirect()->back();
+            }
+           }
         $posts=Post::all();
         return view('home.homepage', compact('posts'));
     }

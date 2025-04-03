@@ -6,6 +6,7 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Http\Middleware\UserMiddleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 Route::get('/', [HomeController::class, 'homepage']);
 Route::get('/show_details/{id}',[HomeController::class, 'show_details']);
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
